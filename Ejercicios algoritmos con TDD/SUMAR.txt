@@ -1,0 +1,23 @@
+fun main() {
+     
+   testSum()
+}
+ fun sum (a: Int, b: Int): Int{
+     return (a+b)
+ }
+
+fun testSum(){
+    val response = sum(2,3)
+    val expected = 5
+    if (response == expected ){
+        println ("Test Passed")
+      }else{
+        println ("Test Failed")
+    }
+          
+}
+
+fun esMayorEdad(edad: Int): Boolean {
+    val edadMinima = 18
+    return edad >= edadMinima
+}

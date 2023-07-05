@@ -1,0 +1,29 @@
+// Paso 1: Escribir una prueba para el cálculo del IMC
+
+
+class IMCTest {
+
+   
+    fun calculateIMC() {
+        val person = Person("John", 1.75, 70.0)
+        val expectedIMC = 22.86
+
+        val actualIMC = person.calculateIMC()
+
+        assertEquals(expectedIMC, actualIMC, 0.01)
+    }
+}
+
+// Paso 2: Escribir la implementación básica de la clase Person
+class Person(private val name: String, private val height: Double, private val weight: Double) {
+
+    fun calculateIMC(): Double {
+        return weight / (height * height)
+    }
+}
+
+// Paso 3: Ejecutar las pruebas
+fun main() {
+    val imcTest = IMCTest()
+    imcTest.calculateIMC()
+}

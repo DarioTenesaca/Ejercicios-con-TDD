@@ -1,0 +1,22 @@
+// Paso 1: Escribir una prueba para la validación de edad
+
+class AgeValidationTest {
+
+    @Test
+    fun isValidAge() {
+        assertTrue(validateAge(20))
+        assertFalse(validateAge(5))
+        assertFalse(validateAge(150))
+    }
+}
+
+// Paso 2: Escribir la implementación básica de la función validateAge()
+fun validateAge(age: Int): Boolean {
+    return age in 18..120
+}
+
+// Paso 3: Ejecutar las pruebas
+fun main() {
+    val ageValidationTest = AgeValidationTest()
+    ageValidationTest.isValidAge()
+}
